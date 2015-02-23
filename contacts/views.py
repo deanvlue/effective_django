@@ -1,8 +1,10 @@
-from django.http import HttpResponse
+from django.views.generic import ListView
+from contacts.models import Contact
 
 # Create your views here.
 
-def hello_world(request):
-  return HttpResponse("Hello, World")
+class ContactListView(ListView):
+  model = Contact
+
 
 
