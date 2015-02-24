@@ -16,5 +16,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', contacts.views.ContactListView.as_view(), name='contacts-list')
+    url(r'^$', contacts.views.ContactListView.as_view(), name='contacts-list'),
+    url(r'^new/', contacts.views.CreateContactView.as_view(), name='contacts-new'),
 )
